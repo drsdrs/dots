@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        
+        <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+            <link rel="stylesheet" href="styles/reset.css">
+            <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="styles/jquery-ui.min.css">
+            <link rel="stylesheet" href="styles/jquery.Jcrop.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="APP">
+
+            <div id="nav"></div>
+            <div id="navPadding"></div>
+
+            <div class="row hidden">
+              <div class="col4Center"><canvas id="canvasWave"></canvas></div>
+              <div class="col4Center"><canvas id="canvasWavemod"></canvas></div>
+              <div class="col4Center"><canvas id="canvasSeq"></canvas></div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="switchDiv show" id="waveImage">
+              <h2>WAVE-IMG</h2>
+              <div class="col12Center"><img class="waveCut" src="" id="waveCut" alt="demo" /></div>
+            </div>
+
+            <div class="switchDiv" id="wavemodImage">
+              <h2>WAVEMOD-IMG</h2>
+              <div class="col12Center"><img class="wavemodCut" src="" id="wavemodCut" alt="demo" /></div>
+            </div>
+
+            <div class="switchDiv" id="seqImage">
+              <h2>SEQ-IMG</h2>
+              <div class="col12Center"><img class="seqCut" src="" id="seqCut" alt="demo" /></div>
+            </div>
+ 
+            <div class="clear"></div>
+
+            <!-- <div class="row"> -->
+            <ul id="imageList"></ul>
+            <!-- </div> -->
+            <div class="clear"></div>
+            <div id="footer"></div>
+
+        </div>
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+            <!-- Put libs here -->
+            <script type="text/javascript" src="libs/jquery.js"></script>
+            <script type="text/javascript" src="libs/jquery.Jcrop.js"></script>
+            <!-- <script src="libs/pico/pico.js"></script> -->
+            <!-- <script src='http://cwilso.github.com/WebMIDIAPIShim/WebMIDIAPI.js'></script> -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+            <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
