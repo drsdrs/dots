@@ -30,10 +30,11 @@ app.init.playSnd= ->
   npos = 0
   spos = 0
   soundgen = (->
-    bufferSize = 2048
+    bufferSize = 2048*4
     node = audioCtx.createScriptProcessor(bufferSize, 0, 1)
 
     node.onaudioprocess = (e) ->
+      if canvasWave.width is 0 or canvasWavemod.width is 0 or canvasSeq.width is 0 then return null#app.events.stop()
       imgdataWave = contextWave.getImageData(0, 0, canvasWave.width, canvasWave.height).data
       imgdataWavemod = contextWavemod.getImageData(0, 0, canvasWavemod.width, canvasWavemod.height).data
       imgdataSeq = contextSeq.getImageData(0, 0, canvasSeq.width, canvasSeq.height).data
